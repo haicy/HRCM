@@ -1,5 +1,6 @@
 # HRCM
 Hybrid Referential Compression Method
+
 Copyright (C) 2019                  
 ****************************************************************************
 
@@ -37,8 +38,8 @@ hrcm {compress | decompress}  -r {ref-file-path}{ [-t] {tar-file-path}|[-f] {fil
      {compress | decompress} is mode,  choose one of them according to requirement, required
      -r is the reference, the {ref-file-path} followed, required
      -t is the target, a single to-be-compressed file path {tar-file-path} followed, optional
-	 -f is the alternative option of -t, a set of to-be-compressed file paths included in {filename}, optional
-	 [percent] is the percentage of the second-level matching, default is 10, means 10% of sequences will be used for the second-level matching, optional when -f, illegal when -t
+     -f is the alternative option of -t, a set of to-be-compressed file paths included in {filename}, optional
+     [percent] is the percentage of the second-level matching, default is 10, means 10% of sequences will be used for the second-level matching, optional when -f, illegal when -t
 
 3.2 Output:
 1 compressed file named filename.7z 
@@ -50,10 +51,10 @@ hrcm {compress | decompress}  -r {ref-file-path}{ [-t] {tar-file-path}|[-f] {fil
 
 4.1 compress and decompress hg18_chr22.fa using hg17_chr22.fa as reference
     ./hrcm compress -r hg17_chr22.fa -t hg18_chr22.fa
-	output: hg18_chr22.7z
+    output: hg18_chr22.7z
 	
-	./hrcm decompress -r hg17_chr22.fa -t hg18_chr22.7z
-	output: hg18_chr22.fasta
+    ./hrcm decompress -r hg17_chr22.fa -t hg18_chr22.7z
+    output: hg18_chr22.fasta
 	
 4.2 compress and decompress hg17_chr22.fa and hg18_chr22.fa, using hg13_chr22.fa as reference. The to-be-compressed paths are written in chr22.txt
     ./hrcm compress -r hg13_chr22.fa -f chr22.txt 100
@@ -62,11 +63,11 @@ hrcm {compress | decompress}  -r {ref-file-path}{ [-t] {tar-file-path}|[-f] {fil
 
     ./hrcm decompress -r hg13_chr22.fa -f chr22.txt 100
     output: hg17_chr22.fasta 
-			hg18_chr22.fasta
+            hg18_chr22.fasta
     The decomprssed file path is specified in chr22.txt.
 
 4.3 check the difference between original file and decompressed file
     diff hg17_chr22.fa hg17_chr22.fasta
-	diff hg18_chr22.fa hg18_chr22.fasta
+    diff hg18_chr22.fa hg18_chr22.fasta
 
 ***************************************************************************
