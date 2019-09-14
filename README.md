@@ -26,6 +26,7 @@ https://github.com/haicy/HRCM
 A C/C++ compiler and the STL library. In the Makefile, we use g++ as the default compiler command.
 
 2.3 Compiling: 　
+
 Run "make" in the HRCM source code directory, the executable file hrcm is in the current directory.
 Run "chmod 777 7za" to change the access permission of the 7-zip executables.
 
@@ -35,10 +36,15 @@ Run "chmod 777 7za" to change the access permission of the 7-zip executables.
 
 3.1 Usage
 hrcm {compress | decompress}  -r {ref-file-path}{ [-t] {tar-file-path}|[-f] {filename} [percent]}
+
      {compress | decompress} is mode,  choose one of them according to requirement, required
+     
      -r is the reference, the {ref-file-path} followed, required
+     
      -t is the target, a single to-be-compressed file path {tar-file-path} followed, optional
+     
      -f is the alternative option of -t, a set of to-be-compressed file paths included in {filename}, optional
+     
      [percent] is the percentage of the second-level matching, default is 10, means 10% of sequences will be used for the second-level matching, optional when -f, illegal when -t
 
 3.2 Output:
@@ -67,6 +73,7 @@ hrcm {compress | decompress}  -r {ref-file-path}{ [-t] {tar-file-path}|[-f] {fil
     The decomprssed file path is specified in chr22.txt.
 
 4.3 check the difference between original file and decompressed file
+
     diff hg17_chr22.fa hg17_chr22.fasta
     diff hg18_chr22.fa hg18_chr22.fasta
 
