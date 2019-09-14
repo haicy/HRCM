@@ -1,5 +1,5 @@
 ****************************************************************************                             
-			    HRCM
+	          HRCM
   (Hybrid Referential Compression Method )
 
      https://github.com/haicy/HRCM
