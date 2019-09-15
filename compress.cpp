@@ -840,8 +840,8 @@ void show_usage() {
 	cout << "Examples:\n";
 	cout << "  hrcm compress -r hg17_chr22.fa -t hg18_chr22.fa\n";
 	cout << "  hrcm decompress -r hg17_chr22.fa -t hg18_chr22.7z\n";
-	cout << "  hrcm compress -r hg17_chr21.fa -f filename.txt 20\n";
-	cout << "  hrcm decompress -r hg17_chr21.fa -f filename.txt 20\n";
+	cout << "  hrcm compress -r hg17_chr22.fa -f filename.txt 20\n";
+	cout << "  hrcm decompress -r hg17_chr22.fa -f filename.txt 20\n";
 }
 
 int main(int argc, char *argv[]) {
