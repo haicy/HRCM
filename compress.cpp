@@ -836,10 +836,10 @@ void show_usage() {
 	cout << "  -r is the reference, the {ref-file-path} followed, required\n";
 	cout << "  -t is the target, a single to-be-compressed file path {tar-file-path} followed, optional\n";
 	cout << "  -f is the alternative option of -t, a set of to-be-compressed file paths included in {filename}, optional\n";
-    cout << "  [percent] is the percentage of the second-level matching, default is 10, means 10 percent of sequences will be used for the second-level matching, optional when -f, illegal when -t\n";
+    cout << "  [percent] is the percentage of the second-level matching, default is 10, means 10% of sequences will be used for the second-level matching, optional when -f, illegal when -t\n";
 	cout << "Examples:\n";
-	cout << "  hrcm compress -r hg17_chr21.fa -t hg18_chr21.fa\n";
-	cout << "  hrcm decompress -r hg17_chr21.fa -t hg18_chr21_ref_hg17_chr21.fa\n";
+	cout << "  hrcm compress -r hg17_chr22.fa -t hg18_chr22.fa\n";
+	cout << "  hrcm decompress -r hg17_chr22.fa -t hg18_chr22.7z\n";
 	cout << "  hrcm compress -r hg17_chr21.fa -f filename.txt 20\n";
 	cout << "  hrcm decompress -r hg17_chr21.fa -f filename.txt 20\n";
 }
