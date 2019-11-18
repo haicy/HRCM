@@ -9,9 +9,9 @@
 
 1. Introduction
 
-1.1 HRCM is implemented with C++.
+1.1 HRCM is implemented with C++ referring to the source code of HiRGC (https://github.com/yuansliu/HiRGC). But different from HiRGC, HRCM realized the lowercase character matching and the second-level matching, optimized the memory management, improved the compression efficiency in large collections of genome compression.
 
-1.2 For details of methods, please refer to the original paper.
+1.2 For details of methods, please refer to the original paper (https://doi.org/10.1155/2019/3108950).
 
 1.3 This tool is implemented with linux operating system, you can run the tool on Linux operating system, other operating system is not guaranteed.
 
@@ -72,5 +72,10 @@ hrcm {compress | decompress}  -r {ref-file-path}{ [-t] {tar-file-path}|[-f] {fil
 4.3 check the difference between original file and decompressed file
     diff hg17_chr22.fa hg17_chr22.fasta
     diff hg18_chr22.fa hg18_chr22.fasta
+
+***************************************************************************
+
+5. Citation
+Haichang Yao, Yimu Ji, Kui Li, Shangdong Liu, Jing He, and Ruchuan Wang, “HRCM: An Efficient Hybrid Referential Compression Method for Genomic Big Data,” BioMed Research International, vol. 2019, Article ID 3108950, 13 pages, 2019. https://doi.org/10.1155/2019/3108950.
 
 ***************************************************************************
