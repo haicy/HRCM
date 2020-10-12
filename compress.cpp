@@ -768,23 +768,29 @@ void compressClear()  	//release memory
 
 void extractFileName(char *srcFileName, char *destFileName)
 {
-	unsigned int i=0, j=0;
-	for (; i < strlen(srcFileName); i++) //get the characters between '/' and '.'
+	int i, j, k=0, start=0, end, len;
+	bool endFlag = false;
+	char ch;
+	len = strlen(srcFileName);
+	end = len;
+	for (i = len-1; i >=0 ; i--) //get the characters between '/' and '.'
 	{
-		if (srcFileName[i] == '/')
+		ch = srcFileName[i];
+		if (ch == '.' && !endFlag)
 		{
-			j = 0;
+			end = i;
+			endFlag = true;
 			continue;
 		}
-		else
+		if (ch == '/')
 		{
-			if (srcFileName[i] == '.')
-				break;
-			else
-				destFileName[j++] = srcFileName[i];
+			start = i+1;
+			break;
 		}
 	}
-	destFileName[j] = '\0';
+	for(j = start; j < end; j++)
+		destFileName[k++] = srcFileName[j];
+	destFileName[k] = '\0';
 }
 
 void compress(char *filename)
